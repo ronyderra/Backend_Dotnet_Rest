@@ -1,32 +1,30 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using homeworkS.Models;
+using homeworkS.Data;
 
 namespace homeworkS.Controllers
 {
-    [Route("[controller]")]
-    public class UserListController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class UserListController : ControllerBase
     {
-        private readonly ILogger<UserListController> _logger;
+        private readonly UserDbContext _context;
+        public UserListController(UserDbContext context) => _context = context;
 
-        public UserListController(ILogger<UserListController> logger)
-        {
-            _logger = logger;
-        }
+        [HttpGet]
+        public async Task<IEnumerable<User>> Get()
+        => await _context.Users.ToListAsync();
 
-        public IActionResult Index()
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        public async Task<IActionResult> Create(User user)
         {
-            return View();
-        }
+            await _context.Users.AddAsync(user);
+            await _context.SaveChangesAsync();
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View("Error!");
+            return CreatedAtAction(null, new { id = user.Id }, user);
         }
     }
 }
