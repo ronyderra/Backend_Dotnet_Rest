@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\XNES\\Documents\\homeworkS\\homeworkS.csproj": {}
+    "C:\\Users\\derra\\documents\\homeworkS\\homeworkS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\XNES\\Documents\\homeworkS\\homeworkS.csproj": {
+    "C:\\Users\\derra\\documents\\homeworkS\\homeworkS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\XNES\\Documents\\homeworkS\\homeworkS.csproj",
+        "projectUniqueName": "C:\\Users\\derra\\documents\\homeworkS\\homeworkS.csproj",
         "projectName": "homeworkS",
-        "projectPath": "C:\\Users\\XNES\\Documents\\homeworkS\\homeworkS.csproj",
-        "packagesPath": "C:\\Users\\XNES\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\XNES\\Documents\\homeworkS\\obj\\",
+        "projectPath": "C:\\Users\\derra\\documents\\homeworkS\\homeworkS.csproj",
+        "packagesPath": "C:\\Users\\derra\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\derra\\documents\\homeworkS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\XNES\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\derra\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -81,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
