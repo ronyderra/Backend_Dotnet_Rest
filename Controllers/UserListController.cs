@@ -16,7 +16,6 @@ namespace homeworkS.Controllers
         public async Task<IEnumerable<User>> Get()
         => await _context.Users.ToListAsync();
 
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         public async Task<IActionResult> Create(User user)
