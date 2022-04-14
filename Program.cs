@@ -3,6 +3,7 @@ using homeworkS.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors();
 builder.Services.AddControllers();
 builder.Services.AddDbContext<UserDbContext>(opt =>
     opt.UseInMemoryDatabase("UserList"));
@@ -16,6 +17,8 @@ if (builder.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(c=>c.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
 app.UseAuthorization();
 
